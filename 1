@@ -1,34 +1,4 @@
-maklowicz.github.io/1
-$(document).ready(function() 
-{
-	// SECTION GENERATES BACON IPSUM PARAGRAPHS IN DIV #TEST WITH BACONIPSUM API
-		$.getJSON('https://baconipsum.com/api/?callback=?', 
-			{ 'type':'meat-and-filler', 'start-with-lorem':'1', 'paras':'10' }, function(baconGoodness){
-			if (baconGoodness && baconGoodness.length > 0)
-			{
-				$("#test").html('');
-				for (var i = 0; i < baconGoodness.length; i++)
-					$("#test").append('<p>' + baconGoodness[i] + '</p>');
-				$("#test").show();
-			}
-		});
 
-
-});
-/*body {
-	background-color: red;
-}*/
-#text {
-	max-width: 40%;
-	text-align: justify;
-}
-.formularz {
-	background-color: azure;
-}
-h3:hover{
-	color: red;
-	font-style: italic;
-}
 
 <!DOCTYPE html>
 <html lang="pl-PL">
@@ -75,4 +45,35 @@ h3:hover{
 	</main>
 
 </body>
+$(document).ready(function() 
+{
+	// SECTION GENERATES BACON IPSUM PARAGRAPHS IN DIV #TEST WITH BACONIPSUM API
+		$.getJSON('https://baconipsum.com/api/?callback=?', 
+			{ 'type':'meat-and-filler', 'start-with-lorem':'1', 'paras':'10' }, function(baconGoodness){
+			if (baconGoodness && baconGoodness.length > 0)
+			{
+				$("#test").html('');
+				for (var i = 0; i < baconGoodness.length; i++)
+					$("#test").append('<p>' + baconGoodness[i] + '</p>');
+				$("#test").show();
+			}
+		});
+
+
+});
+/*body {
+	background-color: red;
+}*/
+#text {
+	max-width: 40%;
+	text-align: justify;
+}
+.formularz {
+	background-color: azure;
+}
+h3:hover{
+	color: red;
+	font-style: italic;
+}
+
 </html>
